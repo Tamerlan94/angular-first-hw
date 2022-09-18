@@ -1,0 +1,3 @@
+<select class="form-select" aria-label="Default select example" [ngModel]="selectedValue" (ngModelChange)="onChange($event)" name="selected">
+    <option *ngFor="let cat of category | keyvalue" [value]="cat.key">{{ cat.value }}</option>
+</select>

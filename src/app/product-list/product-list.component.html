@@ -1,0 +1,21 @@
+<div class="col-4">
+    <app-product-filter (change)="onChanged($event)"></app-product-filter>
+  </div>
+<table class="table">
+    <thead>
+        <tr>
+            <td>id</td>
+            <td>Name</td>
+            <td>Description</td>
+            <td>Image</td>
+            <td>Category</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of products">
+            <app-product-item [id]="product.id" [name]="product.name"
+                [description]="product.description" [image]="product.image" [category]="product.category">
+            </app-product-item>
+        </tr>
+    </tbody>
+</table>
